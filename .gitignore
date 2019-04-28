@@ -1,1 +1,6 @@
 build/*
+*.o
+
+project/build-util-Desktop_Qt_5_11_0_Debug_src-Debug/
+
+*.user
