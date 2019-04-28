@@ -1,0 +1,19 @@
+TEMPLATE = subdirs
+
+SUBDIRS += ratio1
+SUBDIRS += tuple2
+SUBDIRS += pair1
+SUBDIRS += tuple1
+SUBDIRS += enableshared1
+SUBDIRS += minmax1
+SUBDIRS += limits1
+SUBDIRS += uniqueptr1
+SUBDIRS += timepoint1
+SUBDIRS += sharedptr2
+SUBDIRS += weakptr2
+SUBDIRS += sharedptr3
+SUBDIRS += clock1
+SUBDIRS += sharedptr1
+SUBDIRS += weakptr1
+SUBDIRS += chrono1
+SUBDIRS += chrono2
