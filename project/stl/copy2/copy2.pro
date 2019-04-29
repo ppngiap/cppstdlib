@@ -3,4 +3,4 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += ../../../util/copy2.cpp
+SOURCES += ../../../stl/copy2.cpp

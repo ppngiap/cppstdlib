@@ -3,4 +3,4 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += ../../../util/deque1.cpp
+SOURCES += ../../../stl/deque1.cpp

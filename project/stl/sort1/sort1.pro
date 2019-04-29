@@ -3,4 +3,4 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += ../../../util/sort1.cpp
+SOURCES += ../../../stl/sort1.cpp

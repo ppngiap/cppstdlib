@@ -3,4 +3,4 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += ../../../util/reviter1.cpp
+SOURCES += ../../../stl/reviter1.cpp

@@ -11,9 +11,10 @@ def mkdir_if_need_to(dir):
     if not os.path.isdir(dir):
         os.mkdir(dir)
 
-def gen_proj_if_need_to(pro, filename):
+def gen_proj_if_need_to(pro, subdir, filename):
     if not os.path.isfile(pro):
         content = open("tools/template.pro").read();
+        content = content.replace("template_dir", subdir);
         content = content.replace("template.cpp", filename);
         f = open(pro, "w")
         f.write(content)
@@ -23,7 +24,7 @@ def gen_proj_if_need_to(pro, filename):
 def gen_proj(subdir, filename):
     dirpath= os.path.join("project", subdir, filename.replace(".cpp", ""))
     mkdir_if_need_to(dirpath)
-    gen_proj_if_need_to(os.path.join(dirpath, filename.replace(".cpp", ".pro")), filename)
+    gen_proj_if_need_to(os.path.join(dirpath, filename.replace(".cpp", ".pro")), subdir, filename)
 
 def gen_subdir_proj(subdir, files):
     dirs = [s.replace(".cpp", "") for s in files]
