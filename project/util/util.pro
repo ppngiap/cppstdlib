@@ -8,6 +8,7 @@ SUBDIRS += enableshared1
 SUBDIRS += minmax1
 SUBDIRS += limits1
 SUBDIRS += uniqueptr1
+SUBDIRS += uniqueptr2
 SUBDIRS += timepoint1
 SUBDIRS += sharedptr2
 SUBDIRS += weakptr2
