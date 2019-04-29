@@ -14,30 +14,28 @@
 #include <dirent.h>  // for opendir(), ...
 #include <cstring>   // for strerror()
 #include <cerrno>    // for errno
-#include <cassert>
 using namespace std;
 
-class Hello
+class DirCloser
 {
   public:
-    Hello(const string& m) : msg(m) {}
-    ~Hello() { cout << msg << endl; }
-
-  private:
-    string msg;
+    void operator () (DIR* dp) {
+        if (closedir(dp) != 0) {
+            std::cerr << "OOPS: closedir() failed" << std::endl;
+        }
+    }
 };
-
-void sink(unique_ptr<Hello> u)
-{
-
-}
 
 int main()
 {
-    unique_ptr<Hello> a{new Hello("a")};
-    assert(a);
-    sink(std::move(a));
-    assert(!a);
-    unique_ptr<Hello> b{new Hello("b")};
-    assert(b);
+    // open current directory:
+    unique_ptr<DIR,DirCloser> pDir(opendir("."));
+
+    // process each directory entry:
+    struct dirent *dp;
+    while ((dp = readdir(pDir.get())) != nullptr) {
+        string filename(dp->d_name);
+        cout << "process " << filename << endl;
+        //...
+    }
 }

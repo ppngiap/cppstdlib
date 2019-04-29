@@ -3,4 +3,6 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
+LIBS += -lrt
+
 SOURCES += ../../../util/sharedptr3.cpp

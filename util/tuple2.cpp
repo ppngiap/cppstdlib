@@ -17,5 +17,18 @@ using namespace std;
 int main()
 {
     tuple <int,float,string> t(77,1.1,"more light");
-    cout << "io: " << t << endl;
+   cout << "io: " << t << endl;
+
+
+   auto a = make_tuple(30, 44.0, "test");
+   cout << "a: " << a << endl;
+
+   auto b = make_tuple("nest", a);
+   cout << "b: " << b << endl;
+
+
+    pair<int, int> p1(1, 2);
+    tuple<int, int> t1(2, 3);
+
+    t1 = p1;
 }

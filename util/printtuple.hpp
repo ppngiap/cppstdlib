@@ -32,7 +32,7 @@ template <typename... Args>
 std::ostream& operator << (std::ostream& strm,
                            const std::tuple<Args...>& t)
 {
-    strm << "[";
+    strm << "<";
     PRINT_TUPLE<0,sizeof...(Args),Args...>::print(strm,t);
-    return strm << "]";
+    return strm << ">";
 }

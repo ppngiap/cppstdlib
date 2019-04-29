@@ -3,6 +3,4 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += ../../../util/tuple2.cpp
-
-OTHER_FILES += tuple2.cc
+SOURCES += ../../../util/uniqueptr1.cpp

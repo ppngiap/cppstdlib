@@ -40,10 +40,10 @@ int main()
     // create tuple with make_tuple()
     // - auto declares t2 with type of right-hand side
     // - thus, type of t2 is tuple
-    auto t2 = make_tuple(22, 44, "nico");
+    auto t2 = make_tuple(41, 44, "nico");
 
     // assign second value in t2 to t1
-    get<1>(t1) = get<1>(t2);
+    //get<1>(t1) = get<1>(t2);
 
     // comparison and assignment
     // - including type conversion from tuple<int,int,const char*>

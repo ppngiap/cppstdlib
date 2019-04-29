@@ -31,4 +31,7 @@ int main()
 
    typedef ratio<7,-3> Neg;
    cout << Neg::num << "/" << Neg::den << endl;
+
+
+   cout << std::nano::num << "/" << std::nano::den << endl;
 }
