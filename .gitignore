@@ -1,1 +1,4 @@
 build/*
+tools/\.idea/
+
+project/util/util\.pro\.user
